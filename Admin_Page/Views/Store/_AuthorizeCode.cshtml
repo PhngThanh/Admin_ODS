@@ -1,0 +1,22 @@
+﻿@model Admin_Page.Models.AuthorizeCode
+
+@{
+    if (Model == null)
+    {
+        <h2> CLM </h2>
+    }
+    else
+    {
+        using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100", role = "form" }))
+        {
+            <div class="input-group">
+                @Html.TextBox(Model.code,null, new { @class = "form-control bg-light border-0 small" })
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="button">
+                        <i class="fas fa-search fa-sm"></i>
+                    </button>
+                </div>
+            </div>
+        }
+    }
+}

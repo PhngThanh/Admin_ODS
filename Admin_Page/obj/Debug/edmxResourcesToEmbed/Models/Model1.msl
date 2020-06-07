@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Demo_RESTfulModelStoreContainer" CdmEntityContainer="Demo_RESTfulEntities">
+    <EntitySetMapping Name="AuthorizeCodes">
+      <EntityTypeMapping TypeName="Demo_RESTfulModel.AuthorizeCode">
+        <MappingFragment StoreEntitySet="AuthorizeCode">
+          <ScalarProperty Name="codeId" ColumnName="codeId" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+          <ScalarProperty Name="expiredDate" ColumnName="expiredDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

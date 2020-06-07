@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AuthorizedCodeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AuthorizeCode">
+    <Key>
+      <PropertyRef Name="codeId" />
+    </Key>
+    <Property Name="codeId" Type="int" Nullable="false" />
+    <Property Name="code" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="createDate" Type="datetime" Nullable="false" />
+    <Property Name="expiredDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="AuthorizedCodeModelStoreContainer">
+    <EntitySet Name="AuthorizeCode" EntityType="Self.AuthorizeCode" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
